@@ -724,3 +724,604 @@ h2 em {
     transform: none;
   }
 }
+
+/* =====================================================
+   MAISHA LOUNGE — PREMIUM DESIGN UPGRADE
+   ===================================================== */
+
+/* 1. GLOBAL POLISH */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  width: min(1180px, 90%);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 110px 0;
+}
+
+.section-dark {
+  background: #10100f;
+  color: #f5ebd8;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.section-heading h2,
+.contact-intro h2,
+.split-content h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.section-heading h2 em,
+.contact-intro h2 em,
+.split-content h2 em {
+  color: #d6a45d;
+}
+
+.eyebrow {
+  color: #d6a45d;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* 2. NAVIGATION */
+
+.header {
+  z-index: 1000;
+  transition: background .4s ease, padding .4s ease;
+}
+
+.header.scrolled {
+  background: rgba(12, 12, 11, .96);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 5px 30px rgba(0,0,0,.2);
+}
+
+.nav a {
+  transition: color .3s ease, opacity .3s ease;
+}
+
+.nav nav a:hover,
+.nav nav a.active {
+  color: #d6a45d;
+}
+
+/* 3. HERO BACKGROUNDS */
+
+.menu-hero {
+  background-image:
+    linear-gradient(90deg, rgba(10,10,9,.82), rgba(10,10,9,.25)),
+    url('images/dining.jpg');
+}
+
+.experiences-hero {
+  background-image:
+    linear-gradient(90deg, rgba(10,10,9,.82), rgba(10,10,9,.25)),
+    url('images/pool.jpg');
+}
+
+.gallery-hero {
+  background-image:
+    linear-gradient(90deg, rgba(10,10,9,.82), rgba(10,10,9,.25)),
+    url('images/gallery-1.jpg');
+}
+
+.contact-hero {
+  background-image:
+    linear-gradient(90deg, rgba(10,10,9,.82), rgba(10,10,9,.25)),
+    url('images/hero.jpg');
+}
+
+.menu-hero,
+.experiences-hero,
+.gallery-hero,
+.contact-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 4. EXPERIENCE CARDS */
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.experience-card {
+  background: #171715;
+  color: #f5ebd8;
+  overflow: hidden;
+  border: 1px solid rgba(214,164,93,.15);
+  transition: transform .45s ease, border-color .45s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(214,164,93,.65);
+}
+
+.card-image {
+  min-height: 290px;
+  background-size: cover;
+  background-position: center;
+  transition: transform .7s ease;
+}
+
+.experience-card:hover .card-image {
+  transform: scale(1.04);
+}
+
+.experience-card {
+  isolation: isolate;
+}
+
+.card-content {
+  position: relative;
+  padding: 30px;
+  background: #171715;
+}
+
+.card-content span {
+  color: #d6a45d;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.card-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 500;
+  margin: 14px 0;
+}
+
+.card-content p {
+  color: #bcb8ad;
+  line-height: 1.8;
+}
+
+/* 5. TEXT LINKS AND BUTTONS */
+
+.text-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: #d6a45d;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: color .3s ease, transform .3s ease;
+}
+
+.text-link:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.btn {
+  transition: transform .3s ease, background .3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* 6. SPLIT FEATURE SECTION */
+
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.split-image {
+  overflow: hidden;
+  min-height: 430px;
+}
+
+.split-image img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  transition: transform .8s ease;
+}
+
+.split-image:hover img {
+  transform: scale(1.05);
+}
+
+.split-content p {
+  color: #bcb8ad;
+  line-height: 1.9;
+  margin: 25px 0;
+}
+
+/* 7. GALLERY GRID */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 300px;
+  gap: 18px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  background: #171715;
+  isolation: isolate;
+}
+
+.gallery-item:nth-child(1),
+.gallery-item:nth-child(5) {
+  grid-row: span 2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 35%, rgba(0,0,0,.82));
+  pointer-events: none;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.09);
+}
+
+.gallery-caption {
+  position: absolute;
+  z-index: 2;
+  left: 25px;
+  bottom: 22px;
+  color: white;
+}
+
+.gallery-caption span {
+  color: #d6a45d;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.gallery-caption h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 7px;
+}
+
+/* 8. CONTACT CARDS */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.contact-card {
+  padding: 38px 30px;
+  background: #171715;
+  border: 1px solid rgba(214,164,93,.2);
+  transition: transform .4s ease, border-color .4s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-7px);
+  border-color: #d6a45d;
+}
+
+.contact-icon {
+  color: #d6a45d;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.contact-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 22px 0 12px;
+}
+
+.contact-card p {
+  color: #bcb8ad;
+  line-height: 1.8;
+}
+
+/* 9. CONTACT FORM */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 75px;
+  align-items: start;
+}
+
+.contact-intro p {
+  color: #bcb8ad;
+  line-height: 1.9;
+  margin-top: 25px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 22px;
+  padding: 35px;
+  background: #191917;
+  border: 1px solid rgba(214,164,93,.2);
+}
+
+.form-group {
+  display: grid;
+  gap: 10px;
+}
+
+.form-group label {
+  color: #d6a45d;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid rgba(214,164,93,.25);
+  background: #10100f;
+  color: #f5ebd8;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  border-radius: 0;
+  transition: border-color .3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #d6a45d;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-note {
+  color: #a9a49a;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* 10. GOOGLE MAP */
+
+.map-container {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(214,164,93,.35);
+  background: #171715;
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  filter: grayscale(85%) contrast(1.05);
+  transition: filter .5s ease;
+}
+
+.map-container:hover iframe {
+  filter: grayscale(0%);
+}
+
+/* 11. CTA SECTION */
+
+.cta-section {
+  position: relative;
+  padding: 110px 20px;
+  background:
+    linear-gradient(rgba(10,10,9,.78), rgba(10,10,9,.82)),
+    url('images/cta.jpg') center/cover no-repeat;
+  text-align: center;
+  color: #fff;
+}
+
+.cta-content {
+  max-width: 750px;
+  margin: auto;
+}
+
+.cta-content h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 18px 0;
+}
+
+.cta-content h2 em {
+  color: #d6a45d;
+}
+
+.cta-content p:not(.eyebrow) {
+  color: #d0c9bb;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+/* 12. SCROLL REVEAL ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity .9s ease,
+    transform .9s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 13. FOOTER */
+
+.footer {
+  background: #090908;
+  color: #f5ebd8;
+  border-top: 1px solid rgba(214,164,93,.2);
+}
+
+.footer-inner {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-inner p {
+  color: #aaa49a;
+  font-size: 12px;
+}
+
+/* 14. MOBILE RESPONSIVENESS */
+
+@media (max-width: 900px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .split-section,
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 250px;
+  }
+
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(5) {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 65px 0;
+  }
+
+  .experience-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 190px;
+    gap: 10px;
+  }
+
+  .gallery-caption {
+    left: 12px;
+    bottom: 12px;
+  }
+
+  .gallery-caption h3 {
+    font-size: 19px;
+  }
+
+  .gallery-caption span {
+    font-size: 9px;
+  }
+
+  .card-image {
+    min-height: 230px;
+  }
+
+  .card-content {
+    padding: 23px;
+  }
+
+  .contact-form {
+    padding: 22px;
+  }
+
+  .split-image,
+  .split-image img {
+    min-height: 280px;
+    height: 280px;
+  }
+
+  .cta-section {
+    padding: 75px 20px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* 15. REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
